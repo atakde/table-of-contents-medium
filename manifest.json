@@ -1,0 +1,33 @@
+{
+  "name": "Create Table Of Contents for Medium stories",
+  "version": "1.0",
+  "description": "Create Table Of Contents for Medium stories",
+  "manifest_version": 3,
+  "author": "Atakan Demircioğlu",
+  "short_name": "table-of-contents-medium",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://medium.com/@*/*",
+        "https://*.medium.com/*"
+      ],
+      "js": [
+        "tooltip.js"
+      ]
+    }
+  ],
+  "icons": {},
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "/images/*"
+      ]
+    }
+  ]
+}
