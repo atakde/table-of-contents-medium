@@ -6,7 +6,10 @@
   "author": "Atakan Demircioğlu",
   "short_name": "table-of-contents-medium",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "webNavigation",
+    "scripting",
+    "tabs"
   ],
   "content_scripts": [
     {
@@ -29,5 +32,11 @@
         "/images/*"
       ]
     }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://*/*"
   ]
 }
